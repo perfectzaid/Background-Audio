@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0; padding: 0; box-sizing: border-box;
+        }
+        main {
+            width: 100%;
+            /* border: 1px solid black; */
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+        }
+        div {
+            width: 70%;
+            height: auto;
+            margin: auto;
+            border: 1px solid black;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div>
+            <a onclick='playSong()' ondblclick="pauseSong()">
+                <img src="https://cdn.pixabay.com/photo/2020/09/17/12/41/cafe-5579069_1280.jpg" alt="image">
+            </a>
+        </div>
+    </main>
+    <script>
+        const mySong = new Audio();
+        mySong.src = './music.mpeg';
+        
+        const playSong = () => {
+            mySong.play()
+        }
+        const pauseSong = () => {
+            mySong.pause()
+        }
+    </script>
+</body>
+</html>
